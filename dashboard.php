@@ -5,7 +5,7 @@ if (!isset($_SESSION["user_email"])) {
     exit;
 }
 
-$profile_picture = "uploads/default.jpg"; // Ensure this file exists in the correct folder
+$profile_picture = "c:\Users\ADMIN\Pictures\Camera Roll\hell yeah.jpg"; // Ensure this file exists in the correct folder
 ?>
 <!DOCTYPE html>
 <html>
@@ -68,8 +68,8 @@ $profile_picture = "uploads/default.jpg"; // Ensure this file exists in the corr
     <div class="dashboard-container">
     <img src="<?php echo $profile_picture; ?>" alt="Profile Picture" width="150">
         <div>
-        <h1>Welcome, <?php echo htmlspecialchars($_SESSION["first_name"] . " " . $_SESSION["last_name"]); ?>!</h1>
-        <p>Your email: <?php echo htmlspecialchars($_SESSION["user_email"]); ?></p>
+        <h1>Welcome, <?php echo htmlspecialchars($_SESSION["last_name"] . " " . $_SESSION["first_name"]); ?>!</h1>
+        <p>Your email: <?php echo htmlspecialchars($_SESSION["users_email"]); ?></p>
         <a href="logout.php">Logout</a>
         </div>
     </div>
